@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.bese"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk { abiFilters 'armeabi', 'armeabi-v7a', 'x86' }
+        flavorDimensions "prduct", "exam"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    androidExtensions {
+        experimental = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    // debug运行的默认取值是排序后的第一个，需要更改环境，可以通过Build Variants修改
+    productFlavors {
+        prduct {
+            dimension "prduct"
+            manifestPlaceholders = [ENV_SERVICE: name, APP_LABEL: "Bese", APP_ICON: "@mipmap/ic_launcher"]
+        }
+        exam {
+            dimension "exam"
+            applicationIdSuffix ".exam"     // 测试环境下更改包名，防止数据混乱。如不需要，可注释掉
+            manifestPlaceholders = [ENV_SERVICE: name, APP_LABEL: "BeseTest", APP_ICON: "@mipmap/ic_launcher"]
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            //这里修改apk文件名, 区分release 和debug 包
+            outputFileName = "Bese_${name}_V${variant.versionName}.apk"
+        }
+    }
+
+    // debug 配置签名，省去正式包与测试包切换包名冲突需要卸载的麻烦
+//    signingConfigs {
+//        debug {
+//            storeFile file('bese_sign.jks')
+//            storePassword "bese2020"
+//            keyAlias "bese"
+//            keyPassword "bese2020"
+//        }
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':beseLibrary')
+
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+//    kotlin反射包
+    api "org.jetbrains.kotlin:kotlin-reflect:1.3.61"
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Retrofit库
+    api 'com.squareup.retrofit2:retrofit:2.7.0'
+    api 'com.squareup.retrofit2:converter-gson:2.7.0'
+    api 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+}
