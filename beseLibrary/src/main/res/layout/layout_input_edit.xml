@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/color_fff"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hc"
+            android:layout_marginEnd="5dp"
+            android:singleLine="true"
+            android:textColor="@color/color_333"
+            android:textSize="18sp" />
+
+        <com.bese.view.InputText
+            android:id="@+id/et_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="top"
+            android:textColor="@color/color_333"
+            android:textColorHint="@color/color_999"
+            android:textCursorDrawable="@drawable/shape_cursor_style"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/hc"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:singleLine="true"
+            android:text="@string/icon_error2"
+            android:textColor="@color/color_999"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hc"
+            android:layout_marginEnd="2dp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:singleLine="true"
+            android:text="@string/icon_hide"
+            android:textColor="@color/color_999"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/input_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="#ced3d9"
+        android:visibility="gone"/>
+
+</RelativeLayout>

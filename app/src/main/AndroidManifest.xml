@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
+        android:name=".ui.base.BaseApplication"
         android:allowBackup="true"
         android:icon="${APP_ICON}"
         android:label="${APP_LABEL}"
@@ -21,7 +22,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="n">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.MainActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -33,8 +35,10 @@
                 <data android:host="bese.com" android:path="/app" android:scheme="bese" />
             </intent-filter>
         </activity>
-
-
+        <activity android:name="com.vedview.DetailDialogActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"  />
+        <activity android:name=".ui.DetailImageViewActivity" />
 
 
         <provider

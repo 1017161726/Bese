@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ImageRectView">
+        <!--宽高比，1：正方形，2.0：瘦高图，0.5：扁图-->
+        <attr name="squareRatio" format="float"/>
+        <!--圆角大小-->
+        <attr name="squareRadius" format="dimension"/>
+        <!--圆角1大小-->
+        <attr name="squareLeftTopRadius" format="dimension"/>
+        <!--圆角2大小-->
+        <attr name="squareRightTopRadius" format="dimension"/>
+        <!--圆角3大小-->
+        <attr name="squareLeftBottomRadius" format="dimension"/>
+        <!--圆角4大小-->
+        <attr name="squareRightBottomRadius" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="ColourLineView">
+        <!--线条高度-->
+        <attr name="line_height" format="dimension"/>
+        <!--第一种颜色块的宽度-->
+        <attr name="item_width" format="dimension"/>
+        <!--第二种颜色块的宽度-->
+        <attr name="separation_width" format="dimension"/>
+        <!--平行四边形倾斜的程度-->
+        <attr name="lean_degree" format="dimension"/>
+        <!--第一种颜色-->
+        <attr name="first_color" format="color"/>
+        <!--第二种颜色-->
+        <attr name="second_color" format="color"/>
+        <!--线条底色-->
+        <attr name="canvas_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="InputView">
+        <attr name="inputTipText" format="string" />
+        <attr name="inputTipColor" format="color"/>
+        <attr name="inputTipWidth" format="dimension" />
+        <attr name="inputTipPaddingLeft" format="dimension" />
+        <attr name="inputTipPaddingRight" format="dimension" />
+        <attr name="inputTipIsIcon" format="boolean"/>
+        <attr name="inputLainText" format="string" />
+        <attr name="inputLainTextColor" format="color" />
+        <attr name="inputHintText" format="string" />
+        <attr name="inputHintColor" format="color"/>
+        <attr name="inputAllTextSize" format="dimension" />
+        <attr name="inputLongClickable" format="boolean"/>
+        <attr name="inputIsSingleLine" format="boolean"/>
+        <attr name="inputMinLine" format="integer"/>
+        <attr name="inputMaxLine" format="integer"/>
+        <attr name="inputIsShowBottomLine" format="boolean"/>
+        <attr name="inputBottomLineColor" format="color"/>
+        <attr name="inputBottomLineFocusedColor" format="color"/>
+        <attr name="inputBottomLineMargin" format="dimension"/>
+        <attr name="editEnable" format="boolean"/>
+        <attr name="inputBgColor" format="color"/>
+        <attr name="inputAreaBackground" format="reference"/>
+        <attr name="inputType">
+            <enum name="text" value="0"/>
+            <enum name="digits" value="1"/>
+            <enum name="number" value = "2"/>
+            <enum name="phone" value = "3"/>
+            <enum name="password" value="4"/>
+        </attr>
+        <attr name="inputMaxLength" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="TextButton">
+        <attr name="radius" format="dimension"/>
+        <attr name="borderLineSize" format="dimension"/>
+        <attr name="borderLineColor" format="color"/>
+        <attr name="bgColor" format="color"/>
+        <attr name="bgColorPressed" format="color"/>
+        <attr name="shadowWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="NumEditor">
+        <attr name="editable" format="boolean"/>
+        <attr name="minNumZero" format="boolean"/>
+        <attr name="buttonWidth" format="dimension" />
+        <attr name="editorPaddingH" format="dimension" />
+        <attr name="editorPaddingV" format="dimension" />
+        <attr name="buttonSize" format="dimension" />
+        <attr name="numberWidth" format="dimension" />
+        <attr name="numberSize" format="dimension" />
+        <attr name="numberColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="HVScrollView">
+        <!--水平内容宽度是否充满，默认false自适应-->
+        <attr name="fillViewportH" format="boolean" />
+        <!--垂直内容高度是否充满，默认false自适应-->
+        <attr name="fillViewportV" format="boolean" />
+        <!--滚动方向，默认both双向滚动-->
+        <attr name="scrollOrientation">
+            <enum name="none" value="0" />
+            <enum name="horizontal" value="1" />
+            <enum name="vertical" value="2" />
+            <enum name="both" value="3" />
+        </attr>
+        <!--内容是否居中显示，默认右上角对齐-->
+        <attr name="childLayoutCenter" format="boolean" />
+    </declare-styleable>
+</resources>
