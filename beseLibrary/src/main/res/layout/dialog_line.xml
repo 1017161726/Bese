@@ -69,7 +69,7 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/px_80"
                 android:layout_weight="1"
-                android:background="@drawable/rct_sld_r6_f"
+                android:background="@drawable/rct_sld_r6"
                 android:backgroundTint="@color/color_0099ff"
                 android:gravity="center"
                 android:singleLine="true"

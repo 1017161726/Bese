@@ -67,6 +67,7 @@ class MainActivity : BaseActivity() {
                 arr5[2] -> 0
                 arr5[3] -> 0
                 arr5[4] -> 0
+                arr5[5] -> startActivity(Intent(applicationContext, DetailListViewActivity::class.java))
             }
         }
     }
@@ -92,7 +93,7 @@ class MainActivity : BaseActivity() {
         var arr2 = arrayOf("吐司", "弹窗", "底部弹窗", "顶部弹窗")
         var arr3 = arrayOf("步进器")
         var arr4 = arrayOf("Lottie")
-        var arr5 = arrayOf("图片展示", "图片选择", "省市区选择", "时间选择", "图片压缩")
+        var arr5 = arrayOf("图片展示", "图片选择", "省市区选择", "时间选择", "图片压缩", "列表")
         var map = LinkedHashMap<String, Array<String>>()
     }
 

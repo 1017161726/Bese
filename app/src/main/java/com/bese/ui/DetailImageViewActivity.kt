@@ -1,6 +1,8 @@
 package com.bese.ui
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.SeekBar
 import com.bese.R
 import com.bese.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.detail_imageview.*
@@ -12,6 +14,23 @@ class DetailImageViewActivity : BaseActivity() {
         setContentView(R.layout.detail_imageview)
         initView()
         initImage()
+
+        /** 解决可横向滑动控件与DrawerLayout的滑动冲突 */
+        seek_radius?.setOnTouchListener { _, _ ->
+            drawer?.requestDisallowInterceptTouchEvent(true)
+            false
+        }
+        seek_radius?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                Log.e("拖动===", "$progress")
+                // 动态改变圆角在api14以后不会触发onDraw，看不到效果. 建议静态使用.
+//                img_square?.setRadius(progress * 5f)
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) { }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) { }
+        })
     }
 
     private fun initImage() {

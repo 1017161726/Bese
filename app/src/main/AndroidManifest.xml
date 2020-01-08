@@ -38,7 +38,12 @@
         <activity android:name="com.vedview.DetailDialogActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"  />
-        <activity android:name=".ui.DetailImageViewActivity" />
+        <activity android:name=".ui.DetailImageViewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"   />
+        <activity android:name=".ui.DetailListViewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"   />
 
 
         <provider

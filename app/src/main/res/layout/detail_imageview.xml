@@ -1,69 +1,306 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/color_fff"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <include layout="@layout/base_title_bar" />
-
-    <ScrollView
+    <!--主界面-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:overScrollMode="never"
-        android:scrollbars="none">
+        android:background="@color/color_fff"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <include layout="@layout/base_title_bar" />
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/px_30"
-                    android:layout_marginTop="@dimen/px_20"
-                    android:text="正常图片展示" />
-
-                <ImageView
-                    android:id="@+id/img_normal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/color_f5f7fa"
-                    android:layout_margin="@dimen/px_10"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/px_30"
-                    android:layout_marginTop="@dimen/px_20"
-                    android:text="方形图片展示" />
-
-                <com.bese.view.ImageRectView
-                    android:id="@+id/img_square"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    app:squareRatio="-2"
-                    app:squareLeftTopRadius="@dimen/px_20"
-                    app:squareRightTopRadius="@dimen/px_80"
-                    app:squareRightBottomRadius="@dimen/px_30"
-                    app:squareLeftBottomRadius="@dimen/px_50"
-                    android:layout_margin="@dimen/px_75"
-                    android:background="@color/color_f5f7fa"/>
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px_30"
+                        android:layout_marginTop="@dimen/px_20"
+                        android:text="正常图片展示" />
+
+                    <ImageView
+                        android:id="@+id/img_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_f5f7fa"
+                        android:padding="@dimen/px_30"
+                        android:layout_margin="@dimen/px_10"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px_30"
+                        android:layout_marginTop="@dimen/px_20"
+                        android:text="方形图片展示" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_ccc"
+                        android:padding="@dimen/px_30">
+
+                        <com.bese.view.ImageRectView
+                            android:id="@+id/img_square"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:squareRatio="0.166"
+                            app:squareRadius="@dimen/px_60"
+                            android:background="@color/color_f5f7fa"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/base_content" />
 
             </LinearLayout>
 
-            <include layout="@layout/base_content" />
+        </androidx.core.widget.NestedScrollView>
 
-        </LinearLayout>
+    </LinearLayout>
 
-    </ScrollView>
+    <!--右侧抽屉界面-->
+    <LinearLayout
+        android:id="@+id/drawer_right"
+        android:layout_width="@dimen/px_400"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/px_120"
+        android:layout_marginBottom="@dimen/px_80"
+        android:background="@drawable/rct_sld_r20"
+        android:backgroundTint="@color/color_0099ff"
+        android:layout_gravity="end"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/px_20"
+                android:text="参数板"
+                android:textSize="@dimen/pt_48"
+                android:textColor="@color/color_fff"/>
+
+            <TextView
+                android:id="@+id/tv_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/px_10"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/px_20"
+                android:text="重置"
+                android:textColor="@color/color_ff3333"
+                android:textSize="@dimen/pt_32"/>
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_20"
+                android:layout_marginEnd="@dimen/px_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="圆角："/>
+
+                <SeekBar
+                    android:id="@+id/seek_radius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="背景颜色："/>
+
+                <HorizontalScrollView
+                    android:id="@+id/hsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <RadioGroup
+                        android:id="@+id/rbg_bg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_bg1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/color_fff"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_bg2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/color_ff9500"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_bg3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/trans_90"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_bg4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/trans_50"
+                            android:text="透明度"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_bg5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/color_006a80"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_bg6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/color_cc1f58"
+                            android:text="随机"/>
+
+                    </RadioGroup>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="按钮可见："/>
+
+                <RadioGroup
+                    android:id="@+id/rbg_btn_visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_btn_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="可见"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_btn_gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="隐藏"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="按钮个数："/>
+
+                <RadioGroup
+                    android:id="@+id/rbg_btn_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_btn_count1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一个"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_btn_count2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="两个"/>
+
+                </RadioGroup>
+
+                <com.bese.view.InputView
+                    android:id="@+id/input_cancel_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    app:inputHintText="取消按钮文案"
+                    app:inputTipText="取消按钮："
+                    app:inputLainText="取消"
+                    app:inputIsShowBottomLine="true"/>
+
+                <com.bese.view.InputView
+                    android:id="@+id/input_confirm_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    app:inputHintText="确认按钮文案"
+                    app:inputTipText="确认按钮："
+                    app:inputLainText="确定"
+                    app:inputIsShowBottomLine="true"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <!--左侧抽屉界面-->
+    <LinearLayout
+        android:id="@+id/drawer_left"
+        android:layout_width="@dimen/px_400"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/px_120"
+        android:layout_marginBottom="@dimen/px_80"
+        android:background="@drawable/rct_sld_r20"
+        android:backgroundTint="@color/color_ff9500"
+        android:layout_gravity="start"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

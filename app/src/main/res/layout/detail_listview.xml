@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--主界面-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fff"
+        android:orientation="vertical">
+
+        <include layout="@layout/base_title_bar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:background="@color/color_edeff2"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:spanCount="3"
+                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"/>
+
+                <include layout="@layout/base_content" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <!--右侧抽屉界面-->
+    <LinearLayout
+        android:id="@+id/drawer_right"
+        android:layout_width="@dimen/px_400"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/px_120"
+        android:layout_marginBottom="@dimen/px_80"
+        android:background="@drawable/rct_sld_r20"
+        android:backgroundTint="@color/color_0099ff"
+        android:layout_gravity="end"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/px_20"
+                android:text="参数板"
+                android:textSize="@dimen/pt_48"
+                android:textColor="@color/color_fff"/>
+
+            <TextView
+                android:id="@+id/tv_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/px_10"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/px_20"
+                android:text="重置"
+                android:textColor="@color/color_ff3333"
+                android:textSize="@dimen/pt_32"/>
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_20"
+                android:layout_marginEnd="@dimen/px_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="圆角："/>
+
+                <SeekBar
+                    android:id="@+id/seek_radius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <!--左侧抽屉界面-->
+    <LinearLayout
+        android:id="@+id/drawer_left"
+        android:layout_width="@dimen/px_400"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/px_120"
+        android:layout_marginBottom="@dimen/px_80"
+        android:background="@drawable/rct_sld_r20"
+        android:backgroundTint="@color/color_ff9500"
+        android:layout_gravity="start"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

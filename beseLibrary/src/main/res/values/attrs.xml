@@ -16,6 +16,14 @@
         <attr name="squareRightBottomRadius" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="DashView">
+        <attr name="dashWidth" format="dimension" />
+        <attr name="solidWidth" format="dimension" />
+        <attr name="solidThick" format="dimension" />
+        <attr name="solidColor" format="color" />
+        <attr name="dashOrientation" format="integer" />
+    </declare-styleable>
+
 
     <declare-styleable name="ColourLineView">
         <!--线条高度-->
