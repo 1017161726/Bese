@@ -94,7 +94,7 @@ class DashView @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
         canvas.save()
         val pts = floatArrayOf(0f, 0f, lineWidth, 0f)
         //在画线之前需要先把画布向下平移办个线段高度的位置，目的就是为了防止线段只画出一半的高度
-//因为画线段的起点位置在线段左下角
+        //因为画线段的起点位置在线段左下角
         canvas.translate(0f, lineThick / 2)
         while (totalWidth <= widthSize) {
             canvas.drawLines(pts, mPaint)

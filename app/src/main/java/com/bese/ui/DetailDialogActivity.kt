@@ -1,12 +1,8 @@
-package com.vedview
+package com.bese.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import androidx.appcompat.app.AlertDialog
-import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.Toast
 import com.bese.R
 import com.bese.ui.base.BaseActivity
 import com.bese.widget.LDialog

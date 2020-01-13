@@ -23,8 +23,11 @@ class DetailImageViewActivity : BaseActivity() {
         seek_radius?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 Log.e("拖动===", "$progress")
-                // 动态改变圆角在api14以后不会触发onDraw，看不到效果. 建议静态使用.
-//                img_square?.setRadius(progress * 5f)
+//                img_square?.setRatio(progress / 100f + 0.3f)
+
+
+                img_square?.setRadius(progress.toFloat())
+
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) { }

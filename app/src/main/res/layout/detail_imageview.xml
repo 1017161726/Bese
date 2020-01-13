@@ -56,16 +56,19 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/color_ccc"
+                        android:background="@color/color_eee"
                         android:padding="@dimen/px_30">
 
                         <com.bese.view.ImageRectView
                             android:id="@+id/img_square"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            app:squareRatio="0.166"
-                            app:squareRadius="@dimen/px_60"
-                            android:background="@color/color_f5f7fa"/>
+                            app:squareRatio="0.3"
+                            app:squareLeftTopRadius="@dimen/px_50"
+                            app:squareRightTopRadius="@dimen/px_30"
+                            app:squareRightBottomRadius="@dimen/px_20"
+                            app:squareLeftBottomRadius="@dimen/px_40"
+                            android:background="@color/color_ccc"/>
 
                     </RelativeLayout>
 

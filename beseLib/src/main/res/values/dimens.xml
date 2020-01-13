@@ -1,10 +1,14 @@
 <resources>
 
     <dimen name="px_m_150">-150dp</dimen>
+    <dimen name="px_m_100">-100dp</dimen>
     <dimen name="px_m_90">-90dp</dimen>
+    <dimen name="px_m_80">-80dp</dimen>
+    <dimen name="px_m_72">-72dp</dimen>
     <dimen name="px_m_60">-60dp</dimen>
     <dimen name="px_m_30">-30dp</dimen>
     <dimen name="px_m_20">-20dp</dimen>
+    <dimen name="px_m_15">-15dp</dimen>
     <dimen name="px_m_12">-12dp</dimen>
     <dimen name="px_m_10">-10dp</dimen>
     <dimen name="px_m_8">-8dp</dimen>
@@ -400,6 +404,8 @@
     <dimen name="px_800">800dp</dimen>
     <dimen name="px_900">900dp</dimen>
     <dimen name="px_1000">1000dp</dimen>
+    <dimen name="px_1200">1200dp</dimen>
+    <dimen name="px_1500">1500dp</dimen>
 
     <dimen name="pt_6">6sp</dimen>
     <dimen name="pt_7">7sp</dimen>

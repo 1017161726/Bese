@@ -4,9 +4,9 @@ import android.content.Intent
 import com.bese.R
 import com.bese.entity.bean.MainListEntity
 import com.bese.ui.base.BaseActivity
+import com.bese.widget.ADialog
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
-import com.vedview.DetailDialogActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.item_vd_text.view.*
 import kotlinx.android.synthetic.main.item_vd_title.view.*
@@ -50,8 +50,15 @@ class MainActivity : BaseActivity() {
     private var jumpListener = object : JumpEventListener {
         override fun doJump(tag: String?) {
             when(tag) {
-                arr1[0] -> 0
-                arr1[1] -> 0
+                arr1[0] -> {
+                    val d = ADialog(this@MainActivity)
+                        d.setTitle("标题DDDDD")
+                    d.setContentView(R.layout.dialog_x)
+                    d.show()
+                }
+                arr1[1] -> {
+                    BaseDialogFragment().show(supportFragmentManager, "000")
+                }
                 arr1[2] -> 0
                 arr1[3] -> 0
                 arr1[4] -> 0

@@ -35,7 +35,7 @@
                 <data android:host="bese.com" android:path="/app" android:scheme="bese" />
             </intent-filter>
         </activity>
-        <activity android:name="com.vedview.DetailDialogActivity"
+        <activity android:name=".ui.DetailDialogActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"  />
         <activity android:name=".ui.DetailImageViewActivity"
