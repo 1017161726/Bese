@@ -76,12 +76,19 @@
     </declare-styleable>
 
     <declare-styleable name="TextButton">
-        <attr name="radius" format="dimension"/>
+        <attr name="buttonRadius" format="dimension"/>
+        <attr name="buttonBgColor" format="color"/>
+        <attr name="buttonBgColorPressed" format="color"/>
+        <attr name="buttonShadowWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="BorderTextButton">
+        <attr name="borderButtonRadius" format="dimension"/>
         <attr name="borderLineSize" format="dimension"/>
         <attr name="borderLineColor" format="color"/>
-        <attr name="bgColor" format="color"/>
-        <attr name="bgColorPressed" format="color"/>
-        <attr name="shadowWidth" format="dimension"/>
+        <attr name="borderButtonBgColor" format="color"/>
+        <attr name="borderButtonBgColorPressed" format="color"/>
+        <attr name="borderButtonShadowWidth" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="NumEditor">

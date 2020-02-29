@@ -1,2 +1,4 @@
 include ':app', ':beseLib'
 rootProject.name='Bese'
+include ':netLib'
+

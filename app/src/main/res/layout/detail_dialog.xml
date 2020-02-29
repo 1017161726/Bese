@@ -37,7 +37,7 @@
                     android:layout_margin="@dimen/px_20"
                     android:orientation="horizontal">
 
-                    <com.bese.view.TextButton
+                    <com.bese.widget.button.TextButton
                         android:id="@+id/dialog_ios_two"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -50,11 +50,11 @@
                         android:paddingBottom="@dimen/px_10"
                         android:text="双按钮"
                         android:textColor="@color/color_fff"
-                        app:bgColor="@color/color_0099ff"
-                        app:bgColorPressed="@color/color_0090f0"
-                        app:radius="@dimen/px_40" />
+                        app:buttonBgColor="@color/color_0099ff"
+                        app:buttonBgColorPressed="@color/color_0090f0"
+                        app:buttonRadius="@dimen/px_40" />
 
-                    <com.bese.view.TextButton
+                    <com.bese.widget.button.TextButton
                         android:id="@+id/dialog_ios_two_no_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -67,11 +67,11 @@
                         android:paddingBottom="@dimen/px_10"
                         android:text="无标题双按钮"
                         android:textColor="@color/color_fff"
-                        app:bgColor="@color/color_0099ff"
-                        app:bgColorPressed="@color/color_0090f0"
-                        app:radius="@dimen/px_40" />
+                        app:buttonBgColor="@color/color_0099ff"
+                        app:buttonBgColorPressed="@color/color_0090f0"
+                        app:buttonRadius="@dimen/px_40" />
 
-                    <com.bese.view.TextButton
+                    <com.bese.widget.button.TextButton
                         android:id="@+id/dialog_ios_one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -85,11 +85,11 @@
                         android:paddingBottom="@dimen/px_10"
                         android:text="单按钮"
                         android:textColor="@color/color_fff"
-                        app:bgColor="@color/color_0099ff"
-                        app:bgColorPressed="@color/color_0090f0"
-                        app:radius="@dimen/px_40" />
+                        app:buttonBgColor="@color/color_0099ff"
+                        app:buttonBgColorPressed="@color/color_0090f0"
+                        app:buttonRadius="@dimen/px_40" />
 
-                    <com.bese.view.TextButton
+                    <com.bese.widget.button.TextButton
                         android:id="@+id/dialog_ios_one_no_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -102,11 +102,11 @@
                         android:paddingBottom="@dimen/px_10"
                         android:text="无标题单按钮"
                         android:textColor="@color/color_fff"
-                        app:bgColor="@color/color_0099ff"
-                        app:bgColorPressed="@color/color_0090f0"
-                        app:radius="@dimen/px_40" />
+                        app:buttonBgColor="@color/color_0099ff"
+                        app:buttonBgColorPressed="@color/color_0090f0"
+                        app:buttonRadius="@dimen/px_40" />
 
-                    <com.bese.view.TextButton
+                    <com.bese.widget.button.TextButton
                         android:id="@+id/dialog_ios_diy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -119,9 +119,9 @@
                         android:paddingBottom="@dimen/px_10"
                         android:text="自定义弹窗"
                         android:textColor="@color/color_fff"
-                        app:bgColor="@color/color_0099ff"
-                        app:bgColorPressed="@color/color_0090f0"
-                        app:radius="@dimen/px_40" />
+                        app:buttonBgColor="@color/color_0099ff"
+                        app:buttonBgColorPressed="@color/color_0090f0"
+                        app:buttonRadius="@dimen/px_40" />
 
                 </com.bese.view.WrapLayout>
 
@@ -145,7 +145,7 @@
                     android:layout_margin="@dimen/px_20"
                     android:orientation="horizontal">
 
-                    <com.bese.view.TextButton
+                    <com.bese.widget.button.TextButton
                         android:id="@+id/dialog_line_blue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -158,11 +158,11 @@
                         android:paddingBottom="@dimen/px_10"
                         android:text="确认按钮"
                         android:textColor="@color/color_fff"
-                        app:bgColor="@color/color_0099ff"
-                        app:bgColorPressed="@color/color_0090f0"
-                        app:radius="@dimen/px_40" />
+                        app:buttonBgColor="@color/color_0099ff"
+                        app:buttonBgColorPressed="@color/color_0090f0"
+                        app:buttonRadius="@dimen/px_40" />
 
-                    <com.bese.view.TextButton
+                    <com.bese.widget.button.TextButton
                         android:id="@+id/dialog_line_delete"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -175,11 +175,11 @@
                         android:paddingBottom="@dimen/px_10"
                         android:text="删除按钮"
                         android:textColor="@color/color_fff"
-                        app:bgColor="@color/color_0099ff"
-                        app:bgColorPressed="@color/color_0090f0"
-                        app:radius="@dimen/px_40" />
+                        app:buttonBgColor="@color/color_0099ff"
+                        app:buttonBgColorPressed="@color/color_0090f0"
+                        app:buttonRadius="@dimen/px_40" />
 
-                    <com.bese.view.TextButton
+                    <com.bese.widget.button.TextButton
                         android:id="@+id/dialog_line_delete_no_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -192,11 +192,11 @@
                         android:paddingBottom="@dimen/px_10"
                         android:text="无标题删除按钮"
                         android:textColor="@color/color_fff"
-                        app:bgColor="@color/color_0099ff"
-                        app:bgColorPressed="@color/color_0090f0"
-                        app:radius="@dimen/px_40" />
+                        app:buttonBgColor="@color/color_0099ff"
+                        app:buttonBgColorPressed="@color/color_0090f0"
+                        app:buttonRadius="@dimen/px_40" />
 
-                    <com.bese.view.TextButton
+                    <com.bese.widget.button.TextButton
                         android:id="@+id/dialog_line_blue_no_cancel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -209,11 +209,11 @@
                         android:paddingBottom="@dimen/px_10"
                         android:text="单确认按钮"
                         android:textColor="@color/color_fff"
-                        app:bgColor="@color/color_0099ff"
-                        app:bgColorPressed="@color/color_0090f0"
-                        app:radius="@dimen/px_40" />
+                        app:buttonBgColor="@color/color_0099ff"
+                        app:buttonBgColorPressed="@color/color_0090f0"
+                        app:buttonRadius="@dimen/px_40" />
 
-                    <com.bese.view.TextButton
+                    <com.bese.widget.button.TextButton
                         android:id="@+id/dialog_line_blue_no_cancel_no_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -226,9 +226,9 @@
                         android:paddingBottom="@dimen/px_10"
                         android:text="单确认无标题按钮"
                         android:textColor="@color/color_fff"
-                        app:bgColor="@color/color_0099ff"
-                        app:bgColorPressed="@color/color_0090f0"
-                        app:radius="@dimen/px_40" />
+                        app:buttonBgColor="@color/color_0099ff"
+                        app:buttonBgColorPressed="@color/color_0090f0"
+                        app:buttonRadius="@dimen/px_40" />
 
                 </com.bese.view.WrapLayout>
 

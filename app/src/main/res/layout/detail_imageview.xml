@@ -259,7 +259,7 @@
 
                 </RadioGroup>
 
-                <com.bese.view.InputView
+                <com.bese.widget.inputview.InputView
                     android:id="@+id/input_cancel_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -269,7 +269,7 @@
                     app:inputLainText="取消"
                     app:inputIsShowBottomLine="true"/>
 
-                <com.bese.view.InputView
+                <com.bese.widget.inputview.InputView
                     android:id="@+id/input_confirm_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

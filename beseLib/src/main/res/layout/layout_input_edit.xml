@@ -27,7 +27,7 @@
             android:textColor="@color/color_333"
             android:textSize="18sp" />
 
-        <com.bese.view.InputText
+        <com.bese.widget.inputview.InputText
             android:id="@+id/et_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
